@@ -1,13 +1,11 @@
-function Concepts({concepts}) {
+import Concept from './Concept';
+
+function Concepts({ concepts }) {
   return (
     <>
       <ul id="concepts">
         {concepts.map((concept) => (
-          <li className="concept">
-            <img src={concept.image} alt={concept.title} />
-            <h2>{concept.title}</h2>
-            <p>{concept.description}</p>
-          </li>
+          <Concept concept={concept} />
         ))}
       </ul>
     </>
